@@ -1,11 +1,7 @@
 body {
-    /* НАШ НОВЫЙ ФОН */
-    background-image: url('forest.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    /* Остальные стили для центрирования и т.д. */
+    /* НАШ НОВЫЙ ГРАДИЕНТНЫЙ ФОН */
+    background: linear-gradient(to bottom, #66BB6A, #2E7D32);
+    
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     color: white;
@@ -14,11 +10,12 @@ body {
     align-items: center;
     height: 100vh;
     overflow: hidden;
+    user-select: none;
 }
 
 .game-container {
     text-align: center;
-    background: rgba(0, 0, 0, 0.4); /* Полупрозрачный фон для читаемости */
+    background: rgba(0, 0, 0, 0.3);
     padding: 20px;
     border-radius: 20px;
 }
@@ -29,15 +26,23 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-/* СТИЛИ ДЛЯ НАШЕЙ КАПЛИ-ЭМОДЗИ */
+.tap-area {
+    margin: 20px 0;
+}
+
 .tappable-emoji {
-    font-size: 120px; /* Делаем эмодзи огромным */
+    font-size: 120px;
     cursor: pointer;
     padding: 20px;
-    transition: transform 0.1s ease; /* Анимация при нажатии */
+    transition: transform 0.1s ease;
 }
 
 .tappable-emoji:active {
-    transform: scale(0.9); /* Уменьшение при клике */
+    transform: scale(0.9);
+}
+
+.info-panel {
+    font-size: 24px;
+    font-weight: 500;
 }
 
